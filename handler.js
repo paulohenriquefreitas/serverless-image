@@ -6,8 +6,8 @@ const dynamoDb = new AWS.DynamoDB.DocumentClient();
 
 const s3 = new AWS.S3({
   region:"us-east-1",
-  accessKeyId: "AKIAIJ6YIO6BONJI637Q",
-  secretAccessKey:"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"
+  accessKeyId: process.env.KEY_ID,
+  secretAccessKey:process.env.SECRET_KEY
 });
 
 module.exports.extractMetadata = (event, context, callback) => {
